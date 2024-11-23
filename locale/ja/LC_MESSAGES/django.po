@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-23 18:34+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: errors/models.py:6
+msgid "Name"
+msgstr ""
+
+#: errors/models.py:7 projects/models.py:13 projects/models.py:31
+#: projects/templates/projects/project_detail.html:4
+msgid "Description"
+msgstr "説明"
+
+#: errors/models.py:8 errors/templates/errors/error_list.html:33
+msgid "Solution"
+msgstr "解決方法"
+
+#: errors/models.py:9
+msgid "Created At"
+msgstr ""
+
+#: errors/models.py:10
+msgid "Updated At"
+msgstr ""
+
+#: errors/templates/errors/error_list.html:5
+#: errors/templates/errors/error_list.html:9
+msgid "Error List"
+msgstr "エラー一覧"
+
+#: errors/templates/errors/error_list.html:15
+msgid "Search errors"
+msgstr "エラーを検索"
+
+#: errors/templates/errors/error_list.html:18
+#, fuzzy
+#| msgid "Search errors"
+msgid "Search"
+msgstr "エラーを検索"
+
+#: errors/templates/errors/error_list.html:37
+msgid "No errors found. Please try a different search term."
+msgstr ""
+
+#: errors/templates/errors/error_list.html:44
+msgid "Page"
+msgstr "ページ"
+
+#: errors/templates/errors/error_list.html:44
+msgid "of"
+msgstr "の"
+
+#: errors/templates/errors/error_list.html:53
+msgid "Previous"
+msgstr "前へ"
+
+#: errors/templates/errors/error_list.html:61
+msgid "Next"
+msgstr "次へ"
+
+#: projects/models.py:11 projects/models.py:29
+#: projects/templates/projects/project_detail.html:2
+msgid "Project Name"
+msgstr "プロジェクト名"
+
+#: projects/models.py:15 projects/models.py:40
+#: projects/templates/projects/project_detail.html:14
+msgid "Error Resolution"
+msgstr "エラー解決"
+
+#: projects/models.py:18 projects/models.py:37
+#: projects/templates/projects/project_detail.html:8
+msgid "Uploaded File"
+msgstr "アップロードされたファイル"
+
+#: projects/templates/projects/project_detail.html:9
+msgid "Download File"
+msgstr "ファイルをダウンロード"
+
+#: projects/templates/projects/project_detail.html:11
+msgid "No file uploaded for this project."
+msgstr "このプロジェクトにはファイルがアップロードされていません。"
+
+#: projects/templates/projects/project_detail.html:18
+msgid "No error resolution recorded yet."
+msgstr "エラー解決がまだ記録されていません。"
+
+#: projects/templates/projects/project_detail.html:21
+msgid "Add or Update Resolution"
+msgstr "解決内容を追加または更新"
+
+#: projects/templates/projects/project_detail.html:24
+msgid "Save"
+msgstr "保存"
+
+#: projects/templates/projects/project_detail.html:27
+msgid "Back to project list"
+msgstr "プロジェクト一覧に戻る"
+
+#~ msgid "Default error description in English"
+#~ msgstr "デフォルトのエラー説明（日本語）"
+
+#~ msgid "Another error description in English"
+#~ msgstr "別のエラー説明（日本語）"

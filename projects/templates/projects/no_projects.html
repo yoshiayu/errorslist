@@ -1,0 +1,7 @@
+{% extends "base.html" %} {% block content %}
+<h2>No Projects Found</h2>
+<p>
+  You don't have any projects yet.
+  <a href="{% url 'upload_file' %}">Create one now</a>.
+</p>
+{% endblock %}

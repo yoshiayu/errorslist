@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+{% trans "Error List" %}
+{% endblock %}
+{% block content %}
+<div class="container">
+  <h1>{% trans "Error List" %}</h1>
+  <form method="get" class="search-form">
+    <input
+      type="text"
+      name="q"
+      value="{{ query }}"
+      placeholder="{% trans 'Search errors' %}"
+      class="search-input"
+    />
+    <button type="submit" class="search-button">{% trans "Search" %}</button>
+  </form>
+  {% if messages %}
+  <ul>
+      {% for message in messages %}
+          <li>{{ message }}</li>
+      {% endfor %}
+  </ul>
+{% endif %}
+
+  <ul class="error-list">
+    {% for error in page_obj.object_list %}
+    <li class="error-item">
+      <h3>{{ error.name }}</h3>
+      <p>{{ error.description|safe }}</p>
+      <p><strong>{% trans "Solution" %}:</strong> {{ error.solution }}</p>
+    </li>
+    {% empty %}
+    <li class="no-results">
+      {% trans "No errors found. Please try a different search term." %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div class="pagination">
+    <span>
+      {% trans "Page" %} {{ page_obj.number }} {% trans "of" %} {{
+      page_obj.paginator.num_pages }}
+    </span>
+    <div>
+      {% if page_obj.has_previous %}
+      <a
+        href="?q={{ query }}&page={{ page_obj.previous_page_number }}"
+        class="pagination-prev"
+      >
+        {% trans "Previous" %}
+      </a>
+      {% endif %}
+      {% if page_obj.has_next %}
+      <a
+        href="?q={{ query }}&page={{ page_obj.next_page_number }}"
+        class="pagination-next"
+      >
+        {% trans "Next" %}
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

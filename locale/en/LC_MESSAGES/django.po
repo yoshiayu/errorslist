@@ -1,0 +1,27 @@
+# English translations (not mandatory, but useful for customization)
+
+msgid ""
+msgstr ""
+
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: en\n"
+
+#: projects/templates/projects/project_detail.html:2
+msgid "Project Name"
+msgstr "Project Name"
+
+#: projects/templates/projects/project_detail.html:4
+msgid "Description"
+msgstr "Description"
+
+#: projects/templates/projects/project_detail.html:8
+msgid "Uploaded File"
+msgstr "Uploaded File"
+
+#: projects/templates/projects/project_detail.html:9
+msgid "Download File"
+msgstr "Download File"
+
+#: projects/templates/projects/project_detail.html:11
+msgid "No file uploaded for this project."
+msgstr "No file uploaded for this project."

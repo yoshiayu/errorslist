@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% load i18n %} {% block content %}
+<h1>{% trans "Project Name" %}: {{ project.project_name }}</h1>
+<p>
+  <strong>{% trans "Description" %}:</strong> {{ project.project_description }}
+</p>
+
+{% if project.uploaded_file %}
+<p><strong>{% trans "Uploaded File" %}:</strong></p>
+<a href="{{ project.uploaded_file.url }}">{% trans "Download File" %}</a>
+{% else %}
+<p>{% trans "No file uploaded for this project." %}</p>
+{% endif %}
+
+<h2>{% trans "Error Resolution" %}</h2>
+{% if project.error_resolution %}
+<p>{{ project.error_resolution }}</p>
+{% else %}
+<p>{% trans "No error resolution recorded yet." %}</p>
+{% endif %}
+
+<h3>{% trans "Add or Update Resolution" %}</h3>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">{% trans "Save" %}</button>
+</form>
+
+<a href="{% url 'project_list' %}">{% trans "Back to project list" %}</a>
+{% endblock %}
