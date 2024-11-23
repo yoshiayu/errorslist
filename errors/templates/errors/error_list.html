@@ -24,6 +24,8 @@
       {% endfor %}
   </ul>
 {% endif %}
+<p>Current language (LANGUAGE_CODE): {{ LANGUAGE_CODE }}</p>
+<p>Session language: {{ request.session.LANGUAGE_CODE }}</p>
 
   <ul class="error-list">
     {% for error in page_obj.object_list %}

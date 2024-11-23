@@ -34,11 +34,11 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",  # 言語切り替えに必要
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.locale.LocaleMiddleware",  # 言語切り替えに必要
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
@@ -101,8 +101,6 @@ AUTH_USER_MODEL = "users.User"  # 必ずカスタムモデルを指定
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
-
-# settings.py
 
 # 有効な言語のリスト
 LANGUAGES = [
@@ -184,4 +182,5 @@ CACHES = {
         "LOCATION": "unique-snowflake",
     }
 }
+SESSION_ENGINE = "django.contrib.sessions.backends.db"
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"

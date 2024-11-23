@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-23 18:34+0900\n"
+"POT-Creation-Date: 2024-11-23 21:45+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,6 +112,28 @@ msgstr "保存"
 #: projects/templates/projects/project_detail.html:27
 msgid "Back to project list"
 msgstr "プロジェクト一覧に戻る"
+
+#: templates/base.html:16
+msgid "Logout"
+msgstr ""
+
+#: templates/base.html:17
+#, fuzzy
+#| msgid "Project Name"
+msgid "My Projects"
+msgstr "プロジェクト名"
+
+#: templates/base.html:19
+msgid "Login"
+msgstr ""
+
+#: templates/base.html:20
+msgid "Sign Up"
+msgstr ""
+
+#: templates/base.html:31
+msgid "Switch"
+msgstr ""
 
 #~ msgid "Default error description in English"
 #~ msgstr "デフォルトのエラー説明（日本語）"
