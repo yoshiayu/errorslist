@@ -112,9 +112,9 @@ LANGUAGES = [
 LANGUAGE_CODE = "ja"
 
 # ロケールディレクトリの設定
-# LOCALE_PATHS = [
-#     BASE_DIR / "locale",
-# ]
+LOCALE_PATHS = [
+    BASE_DIR / "locale",
+]
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, "locale"),
@@ -135,6 +135,10 @@ STATIC_URL = "/static/"
 # 開発時用に静的ファイルのパスを追加
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    BASE_DIR / "error_manager/static",
+    BASE_DIR / "errors/static",
+    BASE_DIR / "projects/static",
+    BASE_DIR / "users/static",
 ]
 # 静的ファイルの収集先
 STATIC_ROOT = BASE_DIR / "staticfiles"

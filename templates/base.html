@@ -5,8 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Error Manager{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <div id="app">
@@ -20,7 +19,6 @@
             <a href="{% url 'signup' %}">{% trans "Sign Up" %}</a>
             {% endif %}
         </nav>
-
         <!-- 言語切り替えフォーム -->
         <form action="{% url 'set_language' %}" method="post">
             {% csrf_token %}
@@ -34,14 +32,15 @@
 
         {% block content %}{% endblock %}
     </div>
-    <script>
-        Vue.config.delimiters = ['[[', ']]'];
-        new Vue({
-            el: "#app",
-            data: {
-                message: "Welcome to Error Manager!",
-            },
-        });
-    </script>
 </body>
 </html>
+
+{% comment %} <script>
+    Vue.config.delimiters = ['[[', ']]'];
+    new Vue({
+        el: "#app",
+        data: {
+            message: "Welcome to Error Manager!",
+        },
+    });
+</script> {% endcomment %}
