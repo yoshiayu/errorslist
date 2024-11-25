@@ -5,10 +5,16 @@ from .models import User
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
-        model = User  # カスタムユーザーモデルを指定
+        model = User
         fields = [
             "username",
             "email",
             "password1",
             "password2",
-        ]  # 必要なフィールドを指定
+        ]
+        widgets = {
+            "username": forms.TextInput(attrs={"class": "input-field"}),
+            "email": forms.EmailInput(attrs={"class": "input-field"}),
+            "password1": forms.PasswordInput(attrs={"class": "input-field"}),
+            "password2": forms.PasswordInput(attrs={"class": "input-field"}),
+        }

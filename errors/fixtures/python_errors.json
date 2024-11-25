@@ -5,7 +5,7 @@
         "fields": {
             "name": "ArithmeticError",
             "description": "Base class for arithmetic errors.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Check mathematical operations and ensure divisor or operation logic is valid.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -16,7 +16,7 @@
         "fields": {
             "name": "AssertionError",
             "description": "Assertion failed.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Verify the assertion condition and ensure it's valid.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -27,7 +27,7 @@
         "fields": {
             "name": "AttributeError",
             "description": "Attribute not found.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Check if the object has the specified attribute before accessing.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -38,7 +38,7 @@
         "fields": {
             "name": "BaseException",
             "description": "Common base class for all exceptions",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Handle exception or inherit a specific subclass for better debugging.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -49,7 +49,7 @@
         "fields": {
             "name": "BlockingIOError",
             "description": "I/O operation would block.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Ensure the file or socket is non-blocking or handle timeout appropriately.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -60,7 +60,7 @@
         "fields": {
             "name": "BrokenPipeError",
             "description": "Broken pipe.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Ensure the connection is active before writing data.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -71,7 +71,7 @@
         "fields": {
             "name": "BufferError",
             "description": "Buffer error.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Check the buffer operations and ensure buffer space is sufficient.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -82,7 +82,7 @@
         "fields": {
             "name": "BytesWarning",
             "description": "Base class for warnings about bytes and buffer related problems, mostly\nrelated to conversion from str or comparing to str.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Verify string and byte conversions are correctly handled.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -93,7 +93,7 @@
         "fields": {
             "name": "ChildProcessError",
             "description": "Child process error.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Ensure proper handling of subprocesses using the 'subprocess' module.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -104,7 +104,7 @@
         "fields": {
             "name": "ConnectionAbortedError",
             "description": "Connection aborted.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Check network conditions and retry establishing the connection.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -115,7 +115,7 @@
         "fields": {
             "name": "ConnectionError",
             "description": "Connection error.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Verify network connectivity and server availability.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -126,7 +126,7 @@
         "fields": {
             "name": "ConnectionRefusedError",
             "description": "Connection refused.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Ensure the server is running and accepting connections.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -137,7 +137,7 @@
         "fields": {
             "name": "ConnectionResetError",
             "description": "Connection reset.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Check for network instability or server-side issues.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -148,7 +148,7 @@
         "fields": {
             "name": "DeprecationWarning",
             "description": "Base class for warnings about deprecated features.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Update the code to use supported features.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -159,7 +159,7 @@
         "fields": {
             "name": "EOFError",
             "description": "Read beyond end of file.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Ensure file reading logic accounts for EOF conditions.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -170,7 +170,7 @@
         "fields": {
             "name": "OSError",
             "description": "Base class for I/O related errors.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Check file or I/O operations and ensure permissions are correct.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -181,7 +181,7 @@
         "fields": {
             "name": "Exception",
             "description": "Common base class for all non-exit exceptions.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Handle specific exceptions or debug further for details.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -192,7 +192,7 @@
         "fields": {
             "name": "FileExistsError",
             "description": "File already exists.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Ensure the file is not overwritten unintentionally.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -203,7 +203,7 @@
         "fields": {
             "name": "FileNotFoundError",
             "description": "File not found.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Verify the file path and ensure the file exists.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -214,7 +214,7 @@
         "fields": {
             "name": "FloatingPointError",
             "description": "Floating point operation failed.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Check for invalid or undefined floating-point operations.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -224,8 +224,8 @@
         "pk": 21,
         "fields": {
             "name": "FutureWarning",
-            "description": "Base class for warnings about constructs that will change semantically\nin the future.",
-            "solution": "Refer to Python documentation for resolution.",
+            "description": "Base class for warnings about constructs that will change semantically in the future.",
+            "solution": "Update your code to match the future behavior.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -236,7 +236,7 @@
         "fields": {
             "name": "GeneratorExit",
             "description": "Request that a generator exit.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Ensure the generator is properly closed after use.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -245,9 +245,9 @@
         "model": "errors.error",
         "pk": 23,
         "fields": {
-            "name": "OSError",
-            "description": "Base class for I/O related errors.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "ImportError",
+            "description": "Import can't find module, or can't find name in module.",
+            "solution": "Verify the module's existence and import path.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -256,9 +256,9 @@
         "model": "errors.error",
         "pk": 24,
         "fields": {
-            "name": "ImportError",
-            "description": "Import can't find module, or can't find name in module.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "ImportWarning",
+            "description": "Base class for warnings about probable mistakes in module imports.",
+            "solution": "Verify the module structure and namespace conflicts.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -267,9 +267,9 @@
         "model": "errors.error",
         "pk": 25,
         "fields": {
-            "name": "ImportWarning",
-            "description": "Base class for warnings about probable mistakes in module imports",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "IndentationError",
+            "description": "Improper indentation.",
+            "solution": "Correct the indentation level to match Python standards.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -278,9 +278,9 @@
         "model": "errors.error",
         "pk": 26,
         "fields": {
-            "name": "IndentationError",
-            "description": "Improper indentation.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "IndexError",
+            "description": "Sequence index out of range.",
+            "solution": "Check the index bounds for your sequence operations.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -289,9 +289,9 @@
         "model": "errors.error",
         "pk": 27,
         "fields": {
-            "name": "IndexError",
-            "description": "Sequence index out of range.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "InterruptedError",
+            "description": "Interrupted by signal.",
+            "solution": "Handle signal interruptions gracefully in your code.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -300,9 +300,9 @@
         "model": "errors.error",
         "pk": 28,
         "fields": {
-            "name": "InterruptedError",
-            "description": "Interrupted by signal.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "IsADirectoryError",
+            "description": "Operation doesn't work on directories.",
+            "solution": "Ensure the operation targets a valid file, not a directory.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -311,9 +311,9 @@
         "model": "errors.error",
         "pk": 29,
         "fields": {
-            "name": "IsADirectoryError",
-            "description": "Operation doesn't work on directories.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "KeyError",
+            "description": "Mapping key not found.",
+            "solution": "Check if the key exists in the mapping before accessing it.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -322,9 +322,9 @@
         "model": "errors.error",
         "pk": 30,
         "fields": {
-            "name": "KeyError",
-            "description": "Mapping key not found.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "KeyboardInterrupt",
+            "description": "Program interrupted by user.",
+            "solution": "Catch the interrupt signal and handle it gracefully.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -333,9 +333,9 @@
         "model": "errors.error",
         "pk": 31,
         "fields": {
-            "name": "KeyboardInterrupt",
-            "description": "Program interrupted by user.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "LookupError",
+            "description": "Base class for lookup errors.",
+            "solution": "Check the validity of the lookup key or index.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -344,9 +344,9 @@
         "model": "errors.error",
         "pk": 32,
         "fields": {
-            "name": "LookupError",
-            "description": "Base class for lookup errors.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "MemoryError",
+            "description": "Out of memory.",
+            "solution": "Optimize memory usage or increase system memory.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -355,9 +355,9 @@
         "model": "errors.error",
         "pk": 33,
         "fields": {
-            "name": "MemoryError",
-            "description": "Out of memory.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "ModuleNotFoundError",
+            "description": "Module not found.",
+            "solution": "Ensure the module is installed and the path is correct.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -366,9 +366,9 @@
         "model": "errors.error",
         "pk": 34,
         "fields": {
-            "name": "ModuleNotFoundError",
-            "description": "Module not found.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "NameError",
+            "description": "Name not found globally.",
+            "solution": "Verify the variable or function name's definition.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -377,9 +377,9 @@
         "model": "errors.error",
         "pk": 35,
         "fields": {
-            "name": "NameError",
-            "description": "Name not found globally.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "NotADirectoryError",
+            "description": "Operation only works on directories.",
+            "solution": "Check if the path points to a directory before operation.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -388,9 +388,9 @@
         "model": "errors.error",
         "pk": 36,
         "fields": {
-            "name": "NotADirectoryError",
-            "description": "Operation only works on directories.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "NotImplementedError",
+            "description": "Method or function hasn't been implemented yet.",
+            "solution": "Provide the required implementation for the method.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -399,9 +399,9 @@
         "model": "errors.error",
         "pk": 37,
         "fields": {
-            "name": "NotImplementedError",
-            "description": "Method or function hasn't been implemented yet.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "OverflowError",
+            "description": "Result too large to be represented.",
+            "solution": "Check for numerical limits or use a larger data type.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -410,9 +410,9 @@
         "model": "errors.error",
         "pk": 38,
         "fields": {
-            "name": "OSError",
-            "description": "Base class for I/O related errors.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "PendingDeprecationWarning",
+            "description": "Base class for warnings about features which will be deprecated in the future.",
+            "solution": "Adapt code to avoid the deprecated feature.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -421,9 +421,9 @@
         "model": "errors.error",
         "pk": 39,
         "fields": {
-            "name": "OverflowError",
-            "description": "Result too large to be represented.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "PermissionError",
+            "description": "Not enough permissions.",
+            "solution": "Ensure proper file or system permissions are granted.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -432,9 +432,9 @@
         "model": "errors.error",
         "pk": 40,
         "fields": {
-            "name": "PendingDeprecationWarning",
-            "description": "Base class for warnings about features which will be deprecated\nin the future.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "ProcessLookupError",
+            "description": "Process not found.",
+            "solution": "Verify the process exists before sending signals to it.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -443,9 +443,9 @@
         "model": "errors.error",
         "pk": 41,
         "fields": {
-            "name": "PermissionError",
-            "description": "Not enough permissions.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "RecursionError",
+            "description": "Recursion limit exceeded.",
+            "solution": "Optimize the recursion logic or increase the recursion limit.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -454,9 +454,9 @@
         "model": "errors.error",
         "pk": 42,
         "fields": {
-            "name": "ProcessLookupError",
-            "description": "Process not found.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "ReferenceError",
+            "description": "Weak ref proxy used after referent went away.",
+            "solution": "Check and maintain references to objects as needed.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -465,9 +465,9 @@
         "model": "errors.error",
         "pk": 43,
         "fields": {
-            "name": "RecursionError",
-            "description": "Recursion limit exceeded.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "ResourceWarning",
+            "description": "Base class for warnings about resource usage.",
+            "solution": "Ensure resources are properly managed and closed.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -476,9 +476,9 @@
         "model": "errors.error",
         "pk": 44,
         "fields": {
-            "name": "ReferenceError",
-            "description": "Weak ref proxy used after referent went away.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "RuntimeError",
+            "description": "Unspecified run-time error.",
+            "solution": "Investigate runtime issues in your program.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -487,9 +487,9 @@
         "model": "errors.error",
         "pk": 45,
         "fields": {
-            "name": "ResourceWarning",
-            "description": "Base class for warnings about resource usage.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "RuntimeWarning",
+            "description": "Base class for warnings about dubious runtime behavior.",
+            "solution": "Examine runtime warnings and address questionable logic.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -498,9 +498,9 @@
         "model": "errors.error",
         "pk": 46,
         "fields": {
-            "name": "RuntimeError",
-            "description": "Unspecified run-time error.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "StopAsyncIteration",
+            "description": "Signal the end from iterator.__anext__().",
+            "solution": "Handle asynchronous iterator termination properly.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -509,9 +509,9 @@
         "model": "errors.error",
         "pk": 47,
         "fields": {
-            "name": "RuntimeWarning",
-            "description": "Base class for warnings about dubious runtime behavior.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "StopIteration",
+            "description": "Signal the end from iterator.__next__().",
+            "solution": "Ensure iteration logic correctly handles StopIteration.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -520,9 +520,9 @@
         "model": "errors.error",
         "pk": 48,
         "fields": {
-            "name": "StopAsyncIteration",
-            "description": "Signal the end from iterator.__anext__().",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "SyntaxError",
+            "description": "Invalid syntax.",
+            "solution": "Review and correct the syntax in your code.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -531,9 +531,9 @@
         "model": "errors.error",
         "pk": 49,
         "fields": {
-            "name": "StopIteration",
-            "description": "Signal the end from iterator.__next__().",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "SyntaxWarning",
+            "description": "Base class for warnings about dubious syntax.",
+            "solution": "Adjust syntax to comply with Python standards.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -542,9 +542,9 @@
         "model": "errors.error",
         "pk": 50,
         "fields": {
-            "name": "SyntaxError",
-            "description": "Invalid syntax.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "SystemError",
+            "description": "Internal error in the Python interpreter.",
+            "solution": "Report the issue with traceback details to Python maintainers.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -553,9 +553,9 @@
         "model": "errors.error",
         "pk": 51,
         "fields": {
-            "name": "SyntaxWarning",
-            "description": "Base class for warnings about dubious syntax.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "SystemExit",
+            "description": "Request to exit from the interpreter.",
+            "solution": "Handle system exit requests where appropriate.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -564,9 +564,9 @@
         "model": "errors.error",
         "pk": 52,
         "fields": {
-            "name": "SystemError",
-            "description": "Internal error in the Python interpreter.\n\nPlease report this to the Python maintainer, along with the traceback,\nthe Python version, and the hardware/OS platform and version.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "TabError",
+            "description": "Improper mixture of spaces and tabs.",
+            "solution": "Use consistent indentation (either spaces or tabs).",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -575,9 +575,9 @@
         "model": "errors.error",
         "pk": 53,
         "fields": {
-            "name": "SystemExit",
-            "description": "Request to exit from the interpreter.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "TimeoutError",
+            "description": "Timeout expired.",
+            "solution": "Increase timeout duration or handle slow operations.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -586,9 +586,9 @@
         "model": "errors.error",
         "pk": 54,
         "fields": {
-            "name": "TabError",
-            "description": "Improper mixture of spaces and tabs.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "TypeError",
+            "description": "Inappropriate argument type.",
+            "solution": "Ensure arguments match expected types.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -597,9 +597,9 @@
         "model": "errors.error",
         "pk": 55,
         "fields": {
-            "name": "TimeoutError",
-            "description": "Timeout expired.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "UnboundLocalError",
+            "description": "Local name referenced but not bound to a value.",
+            "solution": "Declare and initialize variables before use.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -608,9 +608,9 @@
         "model": "errors.error",
         "pk": 56,
         "fields": {
-            "name": "TypeError",
-            "description": "Inappropriate argument type.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "UnicodeDecodeError",
+            "description": "Unicode decoding error.",
+            "solution": "Verify encoding or specify the correct decoder.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -619,9 +619,9 @@
         "model": "errors.error",
         "pk": 57,
         "fields": {
-            "name": "UnboundLocalError",
-            "description": "Local name referenced but not bound to a value.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "UnicodeEncodeError",
+            "description": "Unicode encoding error.",
+            "solution": "Ensure the data can be encoded with the specified encoding.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -630,9 +630,9 @@
         "model": "errors.error",
         "pk": 58,
         "fields": {
-            "name": "UnicodeDecodeError",
-            "description": "Unicode decoding error.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "UnicodeError",
+            "description": "Unicode related error.",
+            "solution": "Check for compatibility between encoders and decoders.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -641,9 +641,9 @@
         "model": "errors.error",
         "pk": 59,
         "fields": {
-            "name": "UnicodeEncodeError",
-            "description": "Unicode encoding error.",
-            "solution": "Refer to Python documentation for resolution.",
+            "name": "UnicodeTranslateError",
+            "description": "Unicode translation error.",
+            "solution": "Handle unsupported characters during translation.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -654,7 +654,7 @@
         "fields": {
             "name": "UnicodeError",
             "description": "Unicode related error.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Check for compatibility between encoders and decoders.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -665,7 +665,7 @@
         "fields": {
             "name": "UnicodeTranslateError",
             "description": "Unicode translation error.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Handle unsupported characters during translation.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -675,8 +675,8 @@
         "pk": 62,
         "fields": {
             "name": "UnicodeWarning",
-            "description": "Base class for warnings about Unicode related problems, mostly\nrelated to conversion problems.",
-            "solution": "Refer to Python documentation for resolution.",
+            "description": "Base class for warnings about Unicode related problems.",
+            "solution": "Review and resolve issues with Unicode handling.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -687,7 +687,7 @@
         "fields": {
             "name": "UserWarning",
             "description": "Base class for warnings generated by user code.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Ensure user-defined warnings are clear and actionable.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -698,7 +698,7 @@
         "fields": {
             "name": "ValueError",
             "description": "Inappropriate argument value (of correct type).",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Validate argument values before passing them.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -709,7 +709,7 @@
         "fields": {
             "name": "Warning",
             "description": "Base class for warning categories.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Address warnings to ensure robust and error-free execution.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
@@ -720,9 +720,49 @@
         "fields": {
             "name": "ZeroDivisionError",
             "description": "Second argument to a division or modulo operation was zero.",
-            "solution": "Refer to Python documentation for resolution.",
+            "solution": "Avoid dividing by zero; add checks to prevent it.",
             "created_at": "2024-11-22T12:00:00Z",
             "updated_at": "2024-11-22T12:00:00Z"
         }
+    },
+    {
+        "Your Projects": "Your Projects",
+        "No projects found.": "No projects found.",
+        "Upload a New Project": "Upload a New Project",
+        "Project Name": "Project Name",
+        "Description": "Description",
+        "Uploaded File": "Uploaded File",
+        "Download File": "Download File",
+        "No file uploaded for this project.": "No file uploaded for this project.",
+        "Error Resolution": "Error Resolution",
+        "No error resolution recorded yet.": "No error resolution recorded yet.",
+        "Add or Update Resolution": "Add or Update Resolution",
+        "Save": "Save",
+        "Back to project list": "Back to project list",
+        "Error List": "Error List",
+        "Search errors": "Search errors",
+        "Search": "Search",
+        "Solution": "Solution",
+        "No matching errors were found.": "No matching errors were found."
+    },
+    {
+        "Your Projects": "あなたのプロジェクト",
+        "No projects found.": "プロジェクトが見つかりません。",
+        "Upload a New Project": "新しいプロジェクトをアップロードする",
+        "Project Name": "プロジェクト名",
+        "Description": "説明",
+        "Uploaded File": "アップロードされたファイル",
+        "Download File": "ファイルをダウンロード",
+        "No file uploaded for this project.": "このプロジェクトにアップロードされたファイルはありません。",
+        "Error Resolution": "エラー解決",
+        "No error resolution recorded yet.": "記録されたエラー解決策はありません。",
+        "Add or Update Resolution": "解決策を追加または更新",
+        "Save": "保存",
+        "Back to project list": "プロジェクト一覧に戻る",
+        "Error List": "エラー一覧",
+        "Search errors": "エラーを検索",
+        "Search": "検索",
+        "Solution": "解決方法",
+        "No matching errors were found.": "一致するエラーは見つかりませんでした。"
     }
 ]

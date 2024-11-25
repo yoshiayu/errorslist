@@ -34,14 +34,16 @@ def set_language_and_clear_cookie(request):
 
 
 def error_list(request):
-    query = request.GET.get("q", "")
-    errors = (
-        Error.objects.filter(name__icontains=query) if query else Error.objects.all()
-    )
+    query = request.GET.get("q", "").strip()  # クエリの前後の空白を除去
+    errors = Error.objects.all()
 
-    # デバッグログを出力
+    if query:
+        # 大文字小文字を区別せずに頭文字一致と完全一致を検索
+        errors = errors.filter(Q(name__istartswith=query) | Q(name__iexact=query))
+
+    # デバッグログを出力（必要に応じて削除）
     logger.debug(f"Query: {query}")
-    logger.debug(f"Errors: {list(errors.values())}")
+    logger.debug(f"Filtered Errors: {list(errors.values())}")
 
     # ハイライト処理
     if query:

@@ -1,28 +1,81 @@
-{% extends "base.html" %} {% load i18n %} {% block content %}
-<h1>{% trans "Project Name" %}: {{ project.project_name }}</h1>
-<p>
-  <strong>{% trans "Description" %}:</strong> {{ project.project_description }}
-</p>
+{% extends "base.html" %}
+{% load static %}
+{% load i18n filters %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'projects/css/project_detail.css' %}">
 
-{% if project.uploaded_file %}
-<p><strong>{% trans "Uploaded File" %}:</strong></p>
-<a href="{{ project.uploaded_file.url }}">{% trans "Download File" %}</a>
-{% else %}
-<p>{% trans "No file uploaded for this project." %}</p>
-{% endif %}
+<div class="project-container">
+    <h1>{{ project.project_name }}</h1>
 
-<h2>{% trans "Error Resolution" %}</h2>
-{% if project.error_resolution %}
-<p>{{ project.error_resolution }}</p>
-{% else %}
-<p>{% trans "No error resolution recorded yet." %}</p>
-{% endif %}
+    <section class="project-info">
+        <p class="info-item"><strong>{% trans "Description" %}:</strong> {{ project.project_description }}</p>
 
-<h3>{% trans "Add or Update Resolution" %}</h3>
-<form method="post">
-  {% csrf_token %} {{ form.as_p }}
-  <button type="submit">{% trans "Save" %}</button>
-</form>
+        {% if project.uploaded_file %}
+        <p><strong>{% trans "Uploaded File" %}:</strong></p>
+        <a class="button download-button" href="{{ project.uploaded_file.url }}">
+            {% trans "Download File" %}
+        </a>
+        {% else %}
+        <p class="no-file">{% trans "No file uploaded for this project." %}</p>
+        {% endif %}
+    </section>
 
-<a href="{% url 'project_list' %}">{% trans "Back to project list" %}</a>
+    <section class="errors-section">
+        <h2>{% trans "Errors" %}</h2>
+        <ul class="error-list">
+            {% for error in project.errors.all %}
+            <li class="error-item">
+                <strong>{% trans "Error" %}:</strong> {{ error.description }}
+                <br>
+                <em>{% trans "Solution" %}:</em> {{ error.solution }}
+            </li>
+            {% empty %}
+            <p class="no-errors">{% trans "No errors associated with this project." %}</p>
+            {% endfor %}
+        </ul>
+
+        <h3>{% trans "Add New Error" %}</h3>
+        <form method="post" class="form-section">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="description">{% trans "説明" %}:</label>
+                {{ error_form.description|add_class:"error-item-width" }}
+            </div>
+            <div class="form-group">
+                <label for="solution">{% trans "解決方法" %}:</label>
+                {{ error_form.solution|add_class:"error-item-width" }}
+            </div>
+            <button type="submit" class="button add-button" name="add_error">
+                {% trans "Add Error" %}
+            </button>
+        </form>
+    </section>
+
+    <section class="resolution-section">
+        <h2>{% trans "Error Resolution" %}</h2>
+        {% if project.error_resolution %}
+        <div class="resolution-item">{{ project.error_resolution }}</div>
+        {% else %}
+        <p class="no-resolution">{% trans "No error resolution recorded yet." %}</p>
+        {% endif %}
+
+        <h3>{% trans "Update Resolution" %}</h3>
+        <form method="post" class="form-section">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="error_resolution">{% trans "エラー解決" %}:</label>
+                {{ resolution_form.error_resolution|add_class:"error-item-width" }}
+            </div>
+            <button type="submit" class="button save-button" name="update_resolution">
+                {% trans "Save" %}
+            </button>
+        </form>
+    </section>
+
+    <div class="back-link">
+        <a class="button back-button" href="{% url 'project_list' %}">
+            {% trans "Back to Project List" %}
+        </a>
+    </div>
+</div>
 {% endblock %}

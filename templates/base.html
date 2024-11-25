@@ -2,45 +2,101 @@
 {% load i18n %}
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Error Manager{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <div id="app">
-        <h1>{{ message }}</h1>
-        <nav>
-            {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}">{% trans "Logout" %}</a>
-            <a href="{% url 'project_list' %}">{% trans "My Projects" %}</a>
-            {% else %}
-            <a href="{% url 'login' %}">{% trans "Login" %}</a>
-            <a href="{% url 'signup' %}">{% trans "Sign Up" %}</a>
-            {% endif %}
-        </nav>
-        <!-- 言語切り替えフォーム -->
-        <form action="{% url 'set_language' %}" method="post">
-            {% csrf_token %}
-            <select name="language">
-                <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-                <option value="ja" {% if LANGUAGE_CODE == 'ja' %}selected{% endif %}>日本語</option>
-            </select>
-            <button type="submit">{% trans "Switch" %}</button>
-        </form>
-        <!-- 言語切り替えフォームここまで -->
+    <head>
+        <meta charset="UTF-8">
+        <title>Error Manager</title>
+        <link rel="stylesheet" href="/static/css/style.css">
 
-        {% block content %}{% endblock %}
+        <!-- Google Translate CSS -->
+        <style>
+            /* Google翻訳バーとウィジェットのスタイル調整 */
+            .goog-te-banner-frame {
+                display: none !important; /* バナー全体を非表示 */
+                height: 0 !important; /* 高さもゼロに設定 */
+                overflow: hidden !important;
+            }
+            .goog-te-gadget-simple {
+                display: inline-block !important; /* 翻訳ウィジェットは表示 */
+                position: fixed; /* 固定位置に設定 */
+                top: 18px; /* 上から10px */
+                right: 20px; /* 右から20px */
+                z-index: 1000; /* 他の要素よりも前面に表示 */
+                background-color: #fff; /* 背景を白に設定（必要に応じて変更） */
+                border: 1px solid #ccc; /* 枠線を追加 */
+                border-radius: 5px; /* 角を丸くする */
+                padding: 5px; /* 内側の余白を追加 */
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* 影を追加 */
+            }
+            iframe[style*="translate.google.com"] {
+                display: none !important; /* 表示される余分なiframeを非表示 */
+            }
+            body {
+                margin: 0 !important; /* ページ全体の位置を調整 */
+                padding: 0;
+            }
+        </style>
+
+        <!-- Google Translate Script -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en', // デフォルトの言語を英語に設定
+                    includedLanguages: 'en,ja', // 翻訳可能な言語
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false // バナーの自動表示を無効化
+                }, 'google_translate_element');
+            }
+
+            // iframeや余分な要素を削除
+            window.addEventListener('load', function () {
+                setTimeout(() => {
+                    // バナー削除
+                    const bannerFrame = document.querySelector('.goog-te-banner-frame');
+                    if (bannerFrame) bannerFrame.remove();
+
+                    // Googleのiframeを非表示
+                    const googleIframes = document.querySelectorAll('iframe[style*="translate.google.com"]');
+                    googleIframes.forEach(iframe => iframe.style.display = 'none');
+                }, 1000); // 翻訳スクリプトが読み込まれた後に実行
+            });
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <a class="logo">
+                    <img src="{% static 'images/logo.png' %}" alt="Pythonエラー集">
+                    <span>Pythonエラー集</span>
+                </a>
+            </div>
+            <div class="nav-container">
+                <div class="nav-links">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'project_list' %}">My Projects</a>
+                    <a href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                    <a href="{% url 'signup' %}">Sign Up</a>
+                    {% endif %}
+                    <a href="{% url 'error_list' %}">Error List</a>
+                </div>
+                <!-- Google Translate UI -->
+                <div id="google_translate_element"></div>
+            </div>
+        </nav>
+    </header>
+    <div>
     </div>
+    <main>
+        
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 {% trans "Error Manager. All rights reserved." %}</p>
+    </footer>
 </body>
 </html>
-
-{% comment %} <script>
-    Vue.config.delimiters = ['[[', ']]'];
-    new Vue({
-        el: "#app",
-        data: {
-            message: "Welcome to Error Manager!",
-        },
-    });
-</script> {% endcomment %}

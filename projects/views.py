@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
+from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from errors.models import Error  # 修正ポイント
 from .models import UserProject
-from .forms import ProjectForm, ErrorResolutionForm
+from .forms import AddErrorForm, ErrorResolutionForm
 
 
 @login_required
@@ -17,23 +18,53 @@ def project_list(request):
 @login_required
 def project_detail(request, pk):
     project = get_object_or_404(UserProject, pk=pk)
+    error_form = AddErrorForm()
+    resolution_form = ErrorResolutionForm(instance=project)
 
     if request.method == "POST":
-        form = ErrorResolutionForm(request.POST, instance=project)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse("project_detail", args=[pk]))
-    else:
-        form = ErrorResolutionForm(instance=project)
+        if "add_error" in request.POST:
+            error_form = AddErrorForm(request.POST)
+            if error_form.is_valid():
+                new_error = error_form.save()
+                project.errors.add(new_error)
+                return HttpResponseRedirect(reverse("project_detail", args=[pk]))
+        elif "update_resolution" in request.POST:
+            resolution_form = ErrorResolutionForm(request.POST, instance=project)
+            if resolution_form.is_valid():
+                resolution_form.save()
+                return HttpResponseRedirect(reverse("project_detail", args=[pk]))
 
     return render(
         request,
         "projects/project_detail.html",
         {
             "project": project,
-            "form": form,
+            "error_form": error_form,
+            "resolution_form": resolution_form,
         },
     )
+
+
+# @login_required
+# def project_detail(request, pk):
+#     project = get_object_or_404(UserProject, pk=pk)
+
+#     if request.method == "POST":
+#         form = ErrorResolutionForm(request.POST, instance=project)
+#         if form.is_valid():
+#             form.save()
+#             return HttpResponseRedirect(reverse("project_detail", args=[pk]))
+#     else:
+#         form = ErrorResolutionForm(instance=project)
+
+#     return render(
+#         request,
+#         "projects/project_detail.html",
+#         {
+#             "project": project,
+#             "form": form,
+#         },
+#     )
 
 
 def upload_file(request):

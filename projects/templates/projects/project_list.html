@@ -1,13 +1,27 @@
-{% extends "base.html" %} {% block content %}
-<h2>Your Projects</h2>
-<ul>
-  {% for project in projects %}
-  <li>
-    <a href="{% url 'project_detail' project.pk %}"
-      >{{ project.project_name }}</a
-    >
-  </li>
-  {% endfor %}
-</ul>
-<a href="{% url 'upload_file' %}">Upload a New Project</a>
+{% extends "base.html" %}
+{%load static%}
+{% load i18n %}
+{% block title %}{% trans "Your Projects" %}{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'projects/css/project_list.css' %}">
+
+<main>
+    <h2>{% trans "Your Projects" %}</h2>
+    <ul>
+        {% for project in projects %}
+        <li>
+            <a href="{% url 'project_detail' project.pk %}">
+                {{ project.project_name }}
+            </a>
+        </li>
+        {% empty %}
+        <li>{% trans "No projects found." %}</li>
+        {% endfor %}
+    </ul>
+    <!-- ボタンを ul から独立 -->
+    <div class="upload-button-container">
+        <a href="{% url 'upload_file' %}">{% trans "Upload a New Project" %}</a>
+    </div>
+</main>
+
 {% endblock %}

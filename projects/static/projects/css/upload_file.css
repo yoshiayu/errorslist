@@ -1,0 +1,152 @@
+/* 全体のスタイルリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全体のレイアウト */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* アップロードコンテナ */
+.upload-container {
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    margin: 20px;
+}
+
+/* タイトル */
+.upload-title {
+    font-size: 2.2em;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* 説明文 */
+.upload-description {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* フォーム全体 */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    /* フォーム要素を中央揃え */
+    width: 100%;
+}
+
+/* フォームグループ */
+.upload-form .form-group {
+    width: 100%;
+    /* 各入力項目の幅を最大に設定 */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* 各フォーム要素の間隔 */
+}
+
+/* 入力フィールド（プロジェクト名や説明用） */
+.upload-form .form-group input,
+.upload-form .form-group textarea,
+.upload-form .form-group select {
+    width: 100%;
+    /* 幅を親コンテナに合わせる */
+    padding: 15px;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* フォーカス時のスタイル */
+.upload-form .form-group input:focus,
+.upload-form .form-group textarea:focus,
+.upload-form .form-group select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* テキストエリア（説明用） */
+.upload-form .form-group textarea {
+    resize: vertical;
+    /* 高さ調整を許可 */
+    min-height: 120px;
+    /* 初期高さを設定 */
+}
+
+/* アップロードボタン */
+.upload-button {
+    padding: 15px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .upload-container {
+        padding: 40px 30px;
+    }
+
+    .upload-title {
+        font-size: 2em;
+    }
+
+    .upload-description {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .upload-form .form-group input,
+    .upload-form .form-group textarea,
+    .upload-form .form-group select {
+        font-size: 1em;
+    }
+
+    .upload-button {
+        font-size: 1.1em;
+    }
+}
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

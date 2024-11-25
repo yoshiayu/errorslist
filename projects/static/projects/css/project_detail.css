@@ -1,0 +1,141 @@
+/* ベース設定 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* コンテナ全体のスタイル */
+.project-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトル */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* セクションタイトル */
+h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #34495e;
+    margin-top: 20px;
+}
+
+/* テキスト項目 */
+.info-item,
+.error-item,
+.resolution-item {
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* フォーム内テキスト幅をエラー項目と揃える */
+/* エラー解決と新規エラー追加フォームの幅を統一 */
+.error-item-width {
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    background: #fdfefe;
+    font-size: 14px;
+}
+
+/* .error-item-width {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    background: #ecf0f1;
+    font-size: 16px;
+    margin-bottom: 10px;
+} */
+
+/* 未登録の状態 */
+.no-file,
+.no-errors,
+.no-resolution {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* エラーリスト */
+ul.error-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* ボタン */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+.download-button {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.add-button {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.save-button {
+    background-color: #8e44ad;
+    color: #fff;
+}
+
+.back-button {
+    background-color: #34495e;
+    color: #fff;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+/* フォームセクション */
+.form-section {
+    margin-top: 20px;
+}
+
+/* リンクセクション */
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}

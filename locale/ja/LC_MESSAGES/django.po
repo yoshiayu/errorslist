@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -20,7 +19,7 @@ msgstr ""
 
 #: errors/models.py:6
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 #: errors/models.py:7 projects/models.py:13 projects/models.py:31
 #: projects/templates/projects/project_detail.html:4
@@ -33,11 +32,11 @@ msgstr "解決方法"
 
 #: errors/models.py:9
 msgid "Created At"
-msgstr ""
+msgstr "作成日時"
 
 #: errors/models.py:10
 msgid "Updated At"
-msgstr ""
+msgstr "更新日時"
 
 #: errors/templates/errors/error_list.html:5
 #: errors/templates/errors/error_list.html:9
@@ -49,14 +48,12 @@ msgid "Search errors"
 msgstr "エラーを検索"
 
 #: errors/templates/errors/error_list.html:18
-#, fuzzy
-#| msgid "Search errors"
 msgid "Search"
-msgstr "エラーを検索"
+msgstr "検索"
 
 #: errors/templates/errors/error_list.html:37
 msgid "No errors found. Please try a different search term."
-msgstr ""
+msgstr "エラーが見つかりませんでした。別の検索語を試してください。"
 
 #: errors/templates/errors/error_list.html:44
 msgid "Page"
@@ -115,28 +112,24 @@ msgstr "プロジェクト一覧に戻る"
 
 #: templates/base.html:16
 msgid "Logout"
-msgstr ""
+msgstr "ログアウト"
 
 #: templates/base.html:17
-#, fuzzy
-#| msgid "Project Name"
 msgid "My Projects"
-msgstr "プロジェクト名"
+msgstr "マイプロジェクト"
 
 #: templates/base.html:19
 msgid "Login"
-msgstr ""
+msgstr "ログイン"
 
 #: templates/base.html:20
 msgid "Sign Up"
-msgstr ""
+msgstr "新規登録"
 
 #: templates/base.html:31
 msgid "Switch"
-msgstr ""
+msgstr "切り替え"
 
-#~ msgid "Default error description in English"
-#~ msgstr "デフォルトのエラー説明（日本語）"
-
-#~ msgid "Another error description in English"
-#~ msgstr "別のエラー説明（日本語）"
+#: errors/templates/errors/error_list.html:33
+msgid "ErrorName"
+msgstr "エラー名"

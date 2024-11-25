@@ -1,4 +1,7 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+<link rel="stylesheet" href="{% static 'projects/css/no_projects.css' %}">
 <h2>No Projects Found</h2>
 <p>
   You don't have any projects yet.

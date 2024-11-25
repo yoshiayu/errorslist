@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Upload File</title>
-  </head>
-  <body>
-    <h1>Upload File</h1>
-    <form method="post" enctype="multipart/form-data">
-      {% csrf_token %} {{ form.as_p }}
-      <button type="submit">Upload</button>
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans "Upload File" %}{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'projects/css/upload_file.css' %}">
+<main class="upload-container">
+    <h1 class="upload-title">{% trans "Upload Your File" %}</h1>
+    <p class="upload-description">{% trans "Please enter details of the error output." %}</p>
+    <form method="post" enctype="multipart/form-data" class="upload-form">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="upload-button">{% trans "Upload" %}</button>
     </form>
-  </body>
-</html>
+</main>
+{% endblock %}
