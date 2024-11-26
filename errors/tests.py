@@ -1,22 +1,57 @@
 from django.test import TestCase
 from django.urls import reverse
-from .models import Error
+from errors.models import Error
 
 
-class ErrorListViewTests(TestCase):
+class ErrorAppTestCase(TestCase):
     def setUp(self):
+        # サンプルデータ作成
         Error.objects.create(
-            name="ModuleNotFoundError",
-            description="指定されたモジュールが見つかりません。",
-            solution="pip install で必要なモジュールをインストールしてください。",
+            name="Error 1", description="Description 1", solution="Solution 1"
         )
         Error.objects.create(
-            name="IndentationError",
-            description="インデントが正しくありません。",
-            solution="インデントを正しく修正してください。",
+            name="Error 2", description="Description 2", solution="Solution 2"
         )
 
-    def test_search_results(self):
-        response = self.client.get(reverse("error_list"), {"q": "IndentationError"})
-        self.assertContains(response, "IndentationError")
-        self.assertNotContains(response, "ModuleNotFoundError")
+    def test_error_list_view(self):
+        response = self.client.get(reverse("errors:error_list"))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Error 1")
+        self.assertContains(response, "Error 2")
+
+    def test_search_functionality(self):
+        response = self.client.get(reverse("errors:error_list"), {"q": "Error 1"})
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Error 1")
+        self.assertNotContains(response, "Error 2")
+
+    def test_pagination(self):
+        # 11個のデータを作成してページネーションをテスト
+        for i in range(11):
+            Error.objects.create(
+                name=f"Error {i+3}", description="Test", solution="Test"
+            )
+        response = self.client.get(reverse("errors:error_list"))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Error 1")  # 最初のページにはあるはず
+        self.assertNotContains(response, "Error 11")  # 最初のページにはないはず
+
+        response = self.client.get(reverse("errors:error_list"), {"page": 2})
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Error 11")  # 2ページ目にはあるはず
+
+    def test_language_change(self):
+        response = self.client.post(
+            reverse("errors:set_language_and_clear_cookie"), {"language": "ja"}
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(self.client.cookies["django_language"].value, "ja")
+
+    def test_invalid_language(self):
+        response = self.client.post(
+            reverse("errors:set_language_and_clear_cookie"), {"language": "invalid"}
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(
+            self.client.cookies["django_language"].value, "en"  # デフォルト言語を確認
+        )

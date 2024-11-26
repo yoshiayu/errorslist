@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url('../images/image.jpg');
 }
 
 /* ヘッダー全体のスタイル */
@@ -102,7 +103,7 @@ header {
 /* コンテンツエリア */
 main {
   flex: 1;
-  margin-top: 80px;
+  margin-top: 30px;
   /* ヘッダーの高さ（固定）分の余白 */
   margin-bottom: 70px;
   /* フッターの高さ（固定）分の余白 */

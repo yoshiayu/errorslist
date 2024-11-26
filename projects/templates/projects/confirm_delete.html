@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+<link rel="stylesheet" href="{% static 'projects/css/confirm_delete.css' %}">
+
+<div class="delete-container">
+    <h2 class="delete-title">プロジェクトの削除確認</h2>
+    <p class="delete-message">本当に「<strong>{{ project.project_name }}</strong>」を削除しますか？</p>
+    <form method="post" class="delete-form">
+        {% csrf_token %}
+        <button type="submit" class="delete-button">削除</button>
+        <a href="{% url 'project_list' %}" class="cancel-button">キャンセル</a>
+    </form>
+</div>
+{% endblock %}

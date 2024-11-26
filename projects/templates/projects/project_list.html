@@ -1,27 +1,34 @@
 {% extends "base.html" %}
-{%load static%}
+{% load static %}
 {% load i18n %}
 {% block title %}{% trans "Your Projects" %}{% endblock %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'projects/css/project_list.css' %}">
 
-<main>
+<main class="project-list-container">
     <h2>{% trans "Your Projects" %}</h2>
-    <ul>
+    <ul class="project-list">
         {% for project in projects %}
-        <li>
-            <a href="{% url 'project_detail' project.pk %}">
-                {{ project.project_name }}
-            </a>
+        <li class="project-item">
+            <div class="project-header">
+                <!-- プロジェクト名をクリック可能に -->
+                <a href="{% url 'project_detail' project.pk %}" class="project-name-link">
+                    <h3 class="project-name">{{ project.project_name }}</h3>
+                </a>
+                <!-- 削除ボタン -->
+                <a href="{% url 'delete_project' project.pk %}" class="button delete-button">
+                    {% trans "Delete" %}
+                </a>
+            </div>
         </li>
         {% empty %}
-        <li>{% trans "No projects found." %}</li>
+        <li class="no-projects">{% trans "No projects found." %}</li>
         {% endfor %}
     </ul>
-    <!-- ボタンを ul から独立 -->
     <div class="upload-button-container">
-        <a href="{% url 'upload_file' %}">{% trans "Upload a New Project" %}</a>
+        <a href="{% url 'upload_file' %}" class="upload-button">
+            {% trans "Upload a New Project" %}
+        </a>
     </div>
 </main>
-
 {% endblock %}

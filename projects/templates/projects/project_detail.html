@@ -23,17 +23,19 @@
     <section class="errors-section">
         <h2>{% trans "Errors" %}</h2>
         <ul class="error-list">
-            {% for error in project.errors.all %}
+            {% for error in errors %}
             <li class="error-item">
                 <strong>{% trans "Error" %}:</strong> {{ error.description }}
                 <br>
                 <em>{% trans "Solution" %}:</em> {{ error.solution }}
             </li>
             {% empty %}
-            <p class="no-errors">{% trans "No errors associated with this project." %}</p>
+            <li class="no-errors">
+                <p>{% trans "No errors associated with this project." %}</p>
+            </li>
             {% endfor %}
         </ul>
-
+    
         <h3>{% trans "Add New Error" %}</h3>
         <form method="post" class="form-section">
             {% csrf_token %}
@@ -50,6 +52,7 @@
             </button>
         </form>
     </section>
+    
 
     <section class="resolution-section">
         <h2>{% trans "Error Resolution" %}</h2>
@@ -79,3 +82,13 @@
     </div>
 </div>
 {% endblock %}
+
+{% comment %} {% for error in project.errors.all %}
+            <li class="error-item">
+                <strong>{% trans "Error" %}:</strong> {{ error.description }}
+                <br>
+                <em>{% trans "Solution" %}:</em> {{ error.solution }}
+            </li>
+            {% empty %}
+            <p class="no-errors">{% trans "No errors associated with this project." %}</p>
+            {% endfor %} {% endcomment %}

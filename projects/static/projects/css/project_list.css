@@ -22,49 +22,79 @@ h2 {
 }
 
 /* プロジェクトリスト */
-ul {
+.project-list {
     list-style: none;
     padding: 0;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-li {
+.project-item {
     background-color: white;
     border: 1px solid #ddd;
-    margin: 10px 0;
-    padding: 15px;
     border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-li:hover {
+.project-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-a {
+/* プロジェクトヘッダー（名前と削除ボタンのコンテナ） */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* プロジェクト名リンク */
+.project-name-link {
     text-decoration: none;
-    font-weight: bold;
-    color: #2c3e50;
 }
 
-a:hover {
+.project-name {
+    font-size: 1.5em;
+    margin: 0;
+    color: #34495e;
+    transition: color 0.3s ease;
+}
+
+.project-name-link:hover .project-name {
     color: #4a90e2;
 }
 
-/* 「Upload a New Project」ボタンのコンテナ */
-.upload-button-container {
-    text-align: center;
-    /* ボタンを中央揃え */
-    margin-top: 30px;
-    /* リストとの余白 */
+/* 削除ボタン */
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-/* ボタンのスタイル */
-.upload-button-container a {
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* ボタンのコンテナ */
+.upload-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.upload-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 20px;
     background-color: #4a90e2;
     color: white;
     border-radius: 5px;
@@ -73,7 +103,13 @@ a:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.upload-button-container a:hover {
+.upload-button:hover {
     background-color: #357ab7;
     transform: translateY(-3px);
+}
+
+.no-projects {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
 }

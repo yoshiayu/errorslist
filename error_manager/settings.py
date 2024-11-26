@@ -110,6 +110,7 @@ LANGUAGES = [
 
 # 言語コードのデフォルト
 LANGUAGE_CODE = "ja"
+LANGUAGE_CODE = "en"
 
 # ロケールディレクトリの設定
 LOCALE_PATHS = [
@@ -135,7 +136,6 @@ STATIC_URL = "/static/"
 # 開発時用に静的ファイルのパスを追加
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    BASE_DIR / "error_manager/static",
     BASE_DIR / "errors/static",
     BASE_DIR / "projects/static",
     BASE_DIR / "users/static",
@@ -153,23 +153,17 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #     "disable_existing_loggers": False,
 #     "handlers": {
 #         "console": {
-#             "level": "DEBUG",
 #             "class": "logging.StreamHandler",
 #         },
 #     },
 #     "loggers": {
-#         "django": {
-#             "handlers": ["console"],
+#         "django.db.backends": {
 #             "level": "DEBUG",
-#             "propagate": True,
-#         },
-#         "errors": {
 #             "handlers": ["console"],
-#             "level": "DEBUG",
-#             "propagate": True,
 #         },
 #     },
 # }
+
 
 LOGIN_REDIRECT_URL = "/projects/"
 LOGOUT_REDIRECT_URL = "/accounts/login/"

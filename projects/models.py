@@ -22,7 +22,9 @@ class UserProject(models.Model):
         _("Uploaded File"), upload_to="uploads/", blank=True, null=True
     )
     errors = models.ManyToManyField(Error, blank=True, related_name="projects")
-    error_resolution = models.TextField(_("Error Resolution"), blank=True, null=True)
+    error_resolution = models.TextField(blank=True, null=True)
+
+    # error_resolution = models.TextField(_("Error Resolution"), blank=True, null=True)
 
     def __str__(self):
         return self.project_name
