@@ -140,15 +140,3 @@ error-manager/
 ### ユーザーインターフェースのさらなる改善。
 ### エラーの詳細検索やフィルタリング機能の追加。
 ### モバイル対応の最適化。
-
-## Error Managerプロジェクトについてご意見がある方は下記にお願いいたします。
-<form action="/submit" method="POST">
-  <label for="name">名前:</label><br>
-  <input type="text" id="name" name="name" placeholder="ここに名前を入力" style="width: 300px; padding: 5px;"><br><br>
-  
-  <label for="email">メールアドレス:</label><br>
-  <input type="email" id="email" name="email" placeholder="example@example.com" style="width: 300px; padding: 5px;"><br><br>
-  
-  <input type="submit" value="送信">
-</form>
-
