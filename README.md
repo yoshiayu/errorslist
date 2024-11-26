@@ -142,4 +142,7 @@ error-manager/
 ### モバイル対応の最適化。
 
 ## Error Managerプロジェクトの詳細については、GitHubリポジトリをご確認ください。
-**入力例:**
+<form>
+  <label for="input">ここにテキストを入力してください:</label><br>
+  <input type="text" id="input" name="input" style="width:300px; padding:5px;">
+</form>
