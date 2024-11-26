@@ -141,7 +141,7 @@ error-manager/
 ### エラーの詳細検索やフィルタリング機能の追加。
 ### モバイル対応の最適化。
 
-## Error Managerプロジェクトの詳細については、GitHubリポジトリをご確認ください。
+## Error Managerプロジェクトについてご意見がある方は下記にお願いいたします。
 <form>
   <label for="input">ここにテキストを入力してください:</label><br>
   <input type="text" id="input" name="input" style="width:300px; padding:5px;">
